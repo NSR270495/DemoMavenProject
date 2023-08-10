@@ -8,18 +8,24 @@
   <name>DemoMavenProject</name>
   <url>http://maven.apache.org</url>
 <dependencies>
-	 <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
-<dependency>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.8.1</version>
-</dependency>
-
-    <dependency>
+ <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <build>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.8.1</version>
+      <configuration>
+        <source>1.8</source> <!-- Update this to the Java version you're using -->
+        <target>1.8</target> <!-- Update this to the Java version you're targeting -->
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
 </project>
